@@ -30,6 +30,28 @@ for (var i = 0; i < a.length; i++) {
 console.log(a[result.arrNumber]); // [7,8,9]
 console.log(result.sum);          // 24
 
+
+///////////////////////////////////////////// 
+
+var arr = [11,2,'wqertyr',11,4,'lk',7,8,9,,1,10];
+
+var sum = 0;
+var count = 0;
+
+for (var i = 0; i < arr.length; i++) {
+    if(!isNaN(arr[i])) {
+        count += Number(arr[i]);           
+    } else {
+        if(sum < count) {
+            sum = count;
+            count = 0;
+        }
+    }
+}
+
+console.log(sum);  // 24
+
+
 /* 2) Створити функцію сумування двох дуже
       довгих чисел представлених строкою.
 */
